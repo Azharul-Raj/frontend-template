@@ -1,0 +1,114 @@
+/* @keyframes firstAnimation {
+    0% {
+      transform: translateY(0%);
+    }
+  
+    100% {
+      transform: translateY(30%);
+    }
+}
+ .leafMove::before{
+    transition: all;
+    animation: firstAnimation 3s linear infinite;
+} */
+
+
+
+/* @keyframes secondAnimation {
+    0% {
+      transform: translateX(10px);
+    }
+  
+    100% {
+      transform: translateX(0px);
+    }
+  }  */
+  /* Define a keyframe animation that moves the leaf from left to right */
+
+  
+  @keyframes leftLeaf {
+    0% {
+      transform: rotate(-20deg) translateX(-10px) translateY(0);
+    }
+    50% {
+      transform: rotate(20deg) translateX(10px) translateY(-10px);
+    }
+    100% {
+      transform: rotate(-20deg) translateX(-10px) translateY(0);
+    }
+  }
+  .leftMove{
+    transition: all;
+    animation: leftLeaf 10s ease-in infinite;
+  }
+  .leftMove:hover {
+    transform-origin: backward;
+    transition: all;
+    /* transform: translate(-50%, -50%); */
+  /* animation: swayLeaf 4s ease-in-out infinite; */
+  }
+  /***Right move class*/
+  /* @keyframes rightLeaf {
+    0% {
+      transform: rotate(-20deg) translateX(-10px) translateY(0);
+    }
+    50% {
+      transform: rotate(20deg) translateX(10px) translateY(-10px);
+    }
+    100% {
+      transform: rotate(-20deg) translateX(-10px) translateY(0);
+    }
+  } */
+  @keyframes rightLeaf {
+    0% {
+      transform: rotate(20deg) translateX(10px) translateY(0);
+    }
+    50% {
+      transform: rotate(-20deg) translateX(-10px) translateY(10px);
+    }
+    100% {
+      transform: rotate(20deg) translateX(10px) translateY(0);
+    }
+  }
+  @keyframes moveRightLeaf {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(20px) rotate(10deg);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  .rightMove{
+    transition: all;
+    animation: rightLeaf 10s ease-in infinite;
+  }
+
+  /* SMALL DISH SPIN*/
+
+  @keyframes dishSpin{
+    to{
+      transform:rotate(360deg)
+    }
+  }
+
+  .smallDishAnimate{
+    transition: all;
+    animation: dishSpin 10s linear infinite;
+  }
+
+  /*LARGE DISH ANIMATE*/
+  @keyframes spin {
+    from{
+        transform: rotate(360deg);
+    }
+    to{
+      transform: rotate(0deg);
+    }
+  }
+  .largeDishAnimate{
+    transition: all;
+    animation: dishSpin 15s linear infinite;
+  }

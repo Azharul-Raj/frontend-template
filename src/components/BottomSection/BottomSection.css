@@ -1,0 +1,25 @@
+
+@keyframes moving {
+    0% {
+        transform: translateX(-50%);
+      }
+      100% {
+        transform: translateX(20%);
+      }
+}
+@keyframes largeMove {
+    0%{
+        transform: translateX(-30%);
+    }
+    100%{
+        transform: translateX(29%);
+    }
+}
+.cycleMoving{
+    transition: all;
+    animation: moving 10s linear infinite;
+}
+.largeScreenMoving{
+    transition: all;
+    animation: largeMove 10s linear infinite;
+}
